@@ -34,7 +34,7 @@
                 class="d-flex align-center"
                 dark
                 height="200"
-                @click="test({col: `${m-1}`, row: `${n-1}`})"
+                @click="check({col: `${m-1}`, row: `${n-1}`})"
               >
                 <v-scroll-y-transition>
                   <div
@@ -74,13 +74,15 @@ export default {
     ])
   },
   methods: {
-    test({ col, row}) {
+    check({ col, row}) {
       const box = { col, row, value: this.turn };
       if (this.winner !== null) {
+        // 勝者が決まっているなら続けさせない
         alert('勝敗は決しています。');
         return;
       }
       if (this.data[col][row] != null) {
+        // 入力済みのマスの変更を許さない
         alert('入力済みです');
         return;
       }

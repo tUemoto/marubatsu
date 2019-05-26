@@ -4,13 +4,13 @@ eslint no-param-reassign: ["error", { "props": true, "ignorePropertyModification
 
 import Rule from './rules/rule';
 
-const sideLength = 3;
+const sideLength = 3; // 一辺の長さ
 const rule = new Rule(sideLength);
 export default {
   namespaced: true,
   state: {
     sideLength,
-    turn: true,
+    turn: true, // 手番(true: 先手, false: 後手)
     data: rule.getLattice(),
     winner: null,
   },

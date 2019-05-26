@@ -16,23 +16,19 @@
     </v-toolbar>
 
     <v-content>
-      <Marubatsu/>
+      <router-view/>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import Marubatsu from './components/Game'
 
 export default {
   name: 'App',
-  components: {
-    Marubatsu
-  },
-  data () {
+  data() {
     return {
       //
-    }
-  }
-}
+    };
+  },
+};
 </script>
