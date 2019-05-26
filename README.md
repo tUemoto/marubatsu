@@ -17,6 +17,7 @@ npm run build
 
 ### Run your tests
 ```
+# テストコードはありません
 npm run test
 ```
 

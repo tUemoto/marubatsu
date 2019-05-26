@@ -61,7 +61,7 @@
 
 <script>
 import {
-  mapState, mapActions, mapMutations, mapGetters,
+  mapState, mapActions, mapMutations,
 } from 'vuex';
 
 export default {
@@ -71,10 +71,10 @@ export default {
       'winner',
       'turn',
       'data',
-    ])
+    ]),
   },
   methods: {
-    check({ col, row}) {
+    check({ col, row }) {
       const box = { col, row, value: this.turn };
       if (this.winner !== null) {
         // 勝者が決まっているなら続けさせない
@@ -93,9 +93,9 @@ export default {
     ]),
     ...mapActions('gameControl', [
       'input',
-    ])
-  }
-}
+    ]),
+  },
+};
 </script>
 
 <style lang="css" scoped>
